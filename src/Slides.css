@@ -41,3 +41,23 @@
 .text {
   padding: 60px;
 }
+.slides{
+  position: relative;
+}
+.right-arrow{
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  right:0;
+  top:50%;
+}
+.left-arrow{
+  font-size: 50px;
+  position: absolute;
+  color: white;
+  top:50%;
+  left:0;
+}
+.flex{
+  display:flex;
+}

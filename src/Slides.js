@@ -10,13 +10,23 @@ const Slides = () => {
 
 const images = [
   {
-    image:" https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/8735/958735-h"
+    image:" https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/8735/958735-h",
+    description:"Valmiki and Ramachandra start their career as clerks in the company of Ananth , becomes wealthy while Valmiki remains poor. On the day of the birth of both their children, Ramachandra's son appears to be dead. When nurse Sulochana informs Valmiki about this, he pities Ramachandra and Yasu and offers to exchange his baby with the dead one. After switching them, however, the apparently dead child begins to cry. Sulochana tries to switch them back but Valmiki senses an opportunity that his son would have a better life growing up in a rich family. He prevents her from switching, pushing her accidentally off a ledge. Sulochana goes into a coma, while Valmiki gets a leg cramp that makes him limp permanently. The two boys grow-up in different ways. Raj, raised at Ramachandra's house, is timid, innocent, and soft-spoken, while Bantu, who is raised at Valmiki's house, is smart, outspoken, and hard-working. Valmiki, who favours Raj, treats Bantu with disgust due to his true parentage.",
+      title:"Vikram Vedha" ,
+      specific:"thriller"
   },
   {
-    image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/3893/1063893-h-62576885fa3f"
+    image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/3893/1063893-h-62576885fa3f",
+    description:"Vikram is a brave and honest police inspector who is decisive about right and wrong. Vedha is a criminal who understands the grey shades between good and evil. Vikram leads an encounter unit formed to eliminate Vedha. In one encounter, the squad kills some of Vedha's henchmen, framing the death of a criminal killed by Vikram to avoid further inquiry. When Santhanam, one of the youngest members in the unit, is nervous about this, Vikram calms him by saying that he sleeps peacefully, knowing that the men he shot were criminals. As the unit plans another encounter, Vedha enters the police station and surrenders. When Vikram interrogates Vedha, he offers to tell him a story.",
+  title:"Panchatanth",
+  specific:"Movie "
   },
   {
-    image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/1372/871372-h"
+    image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/1372/871372-h",
+    description:"Aditya is a cab driver who has a one-night stand with his passengerSanaya. When he wakes up, Sanaya is murdered. He finds himself in a pool of her blood, and Sanaya has multiple stab wounds. He leaves thecrime scene, but meets with an accident and is taken to the policetation. Initially, Madhav Mishra is interested in taking the case but",
+title:"Criminal Justice : Behind Closed Doors",
+specific:"Hotstar Specials · Crime"
+
   }
 ]
 
@@ -46,18 +56,10 @@ const prevSlide = () =>{
             <FontAwesomeIcon icon={faAngleRight} className="right-arrow" onClick={prevSlide}/>
               <FontAwesomeIcon icon={faAngleLeft} className="left-arrow" onClick={nextSlide} />
               <div className="text">
-                <span>Criminal Justice : Behind Closed Doors</span>
-                <p className="hot-spec">Hotstar Specials · Crime </p>
+                <span>{image.title}</span>
+                <p className="hot-spec">{image.specific} </p>
                 <h6 className="desc">
-                  Aditya is a cab driver who has a one-night stand with his passenger
-                  Sanaya. When he wakes up, Sanaya is murdered. He finds himself in a
-                  pool of her blood, and Sanaya has multiple stab wounds. He leaves the
-                  crime scene, but meets with an accident and is taken to the police
-                  station. Initially, Madhav Mishra is interested in taking the case but
-                  later on Mandira Mathur takes the case. While she is successful in
-                  getting Aditya freed from charge of a rape, she fails to acquit him
-                  form the murder charge. His lawyer Nikhat Hussain along with Madhav
-                  Mishra , also tries to save him.
+                {image.description}
                 </h6>
               </div>
               <div className="images">
