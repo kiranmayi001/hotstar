@@ -1,10 +1,36 @@
 import { Input } from "@material-ui/core";
-import React from "react";
+import React,{useState} from "react";
 import "./Header.css";
 import {faSearch} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { GoogleLogin,GoogleLogout } from 'react-google-login';
 
 const Header = () => {
+
+
+const [showLoginBtn,setLoginBtn]=useState(true)  
+const [showLogoutBtn,setLogoutBtn]=useState(false)
+
+const onLoginSuccess=(res)=>{
+console.log("login sucess",res.profileObj)
+setLoginBtn(false)
+setLogoutBtn(true)
+}
+
+
+const onFailurSuccess=(res)=>{
+  console.log("login failed",res)
+  }
+
+  const onLogoutSucess=()=>{
+    alert("LOgged out")
+    setLoginBtn(false)
+setLogoutBtn(true)
+console.clear();
+  }
+  
+
+  
   return (
     <div className="header">
       <div className="header-content">
@@ -30,8 +56,34 @@ const Header = () => {
           <Input placeholder="Search" className="search" />
           <i class="fas fa-search"></i>
           <button className="btn">SUBSCRIBE</button>
-          <span className="log">Login</span>
-        </div>
+          {/* <span className="log">Login</span> */}
+          
+      
+
+{showLoginBtn ?
+        <GoogleLogin
+        clientId="734380233577-ktklll665vhtvdn9365ot75lmqrpejn7.apps.googleusercontent.com"
+    render={renderProps => (
+      <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="log custom">Login</button>
+    )}
+    buttonText="Login"
+    onSuccess={onLoginSuccess}
+    onFailure={onFailurSuccess}
+    cookiePolicy={'single_host_origin'}
+  />
+// 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
+  :null}
+  { showLogoutBtn?
+  <GoogleLogout
+      clientId="734380233577-ktklll665vhtvdn9365ot75lmqrpejn7.apps.googleusercontent.com"
+      render={renderProps => (
+        <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="log custom">Logout</button>
+      )}
+      buttonText="Logout"
+      onLogoutSuccess={onLogoutSucess}
+    >
+    </GoogleLogout> :null}
+    </div>
         <div className="search-media-block">
         <button className="btn">SUBSCRIBE</button>
         <FontAwesomeIcon icon={faSearch} className="Font-search"/>
