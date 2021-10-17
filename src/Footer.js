@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import FooterRsponsive from "./FooterRsponsive";
 const Footer = () => {
   return (
     <div className="footer">
@@ -21,6 +22,9 @@ const Footer = () => {
             <i class="fab fa-whatsapp-square whatsapp"></i>
           </a>
         </div>
+      </div>
+      <div className="hide-footer">
+      <FooterRsponsive/>
       </div>
     </div>
   );

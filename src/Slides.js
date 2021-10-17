@@ -90,7 +90,7 @@ const prevSlide = () =>{
     {/* responsive */}
 
     <div className="flex media-block">  
-    <Slider autoplay={true} speed={100}>
+    <Slider autoplay={true} autoplaySpeed={300}>
  {
    images.map((image,index)=>{
      return (

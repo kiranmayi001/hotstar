@@ -58,8 +58,24 @@
   font-size: xx-large;
   margin-left: 10px;
 }
-
+.hide-footer{
+  display: none;
+}
+.footer-right{
+  display: block;
+}
+.footer-left{
+  display: block;
+}
 
 @media screen and (max-width: 600px){
-  
+  .hide-footer{
+    display: block;
+  }
+  .footer-left{
+    display: none;
+  }
+  .footer-right{
+    display: none;
+  }
 }
