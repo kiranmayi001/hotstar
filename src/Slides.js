@@ -44,7 +44,8 @@ const prevSlide = () =>{
 
 
   return (
-    <div className="flex">  
+    <div>
+    <div className="flex media-hide">  
  
       {
         images.map((image,index)=>{
@@ -78,6 +79,43 @@ const prevSlide = () =>{
 }
      
     </div> 
+
+
+
+
+
+
+
+
+    {/* responsive */}
+
+    <div className="flex media-block">  
+    <Slider autoplay={true} speed={100}>
+ {
+   images.map((image,index)=>{
+     return (
+       <div  key={image+index}>
+     
+       <div>
+       <div className="slides">
+         <div className="images change-size-image">
+           <img
+             src={image.image}
+             alt=""
+             className="image-board"
+           />
+         </div>
+       </div>
+       </div> 
+       </div>
+
+     )
+   })
+}
+
+</Slider>
+</div> 
+    </div>
   );
 };
 

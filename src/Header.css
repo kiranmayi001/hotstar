@@ -98,3 +98,41 @@
 .search > ::placeholder {
   color: white !important;
 }
+
+
+
+
+
+
+
+
+
+
+.search-media-block{
+  display: none;
+}
+
+/* responsive */
+
+@media screen and (max-width: 600px){
+  .menu{
+    display: none;
+  }
+  .header-right{
+    display:none;
+  }
+  .kids{
+    display:none;
+  }
+  .search-media-block{
+    display: block;
+    display: flex;
+    justify-content: space-around;
+  }
+  .Font-search{
+    display: block;
+    opacity: 0.6;
+    color: white;
+    margin-left:210px;
+  }
+}

@@ -61,3 +61,42 @@
 .flex{
   display:flex;
 }
+
+
+
+.media-block{
+  display: none;
+}
+
+.media-hide{
+  display: block;
+}
+@media screen and (max-width: 600px){
+  .media-block{
+    display: block;
+    width: 600px;
+    margin: 0;
+  }
+  .media-hide{
+    display: none;
+  }
+.images{
+  width:600px;
+  margin: 0;
+  text-align: center;
+  padding: 0%;
+}
+.change-size-image{
+  margin:0;
+}
+.image-board{
+  width:500px;
+  margin: 0;
+  padding:0;
+}
+.slides{
+  padding:0;
+  margin:0;
+}
+
+}
