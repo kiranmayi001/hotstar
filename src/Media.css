@@ -1,0 +1,14 @@
+.media > img {
+  width: 150px;
+  border-radius: 5px;
+}
+
+.media {
+  margin: 10px;
+  transition: transform 100ms;
+  cursor: pointer;
+}
+
+.media > img:hover {
+  transform: scale(1.09);
+}
